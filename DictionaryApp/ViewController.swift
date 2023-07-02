@@ -11,10 +11,11 @@ class ViewController: UIViewController {
     
     let words = [
         ["Apple", "Pear", "Watermelon"],
-        ["Carrot", "Pickle", "Potato", "Tomato"]
+        ["Carrot", "Pickle", "Potato", "Tomato"],
+        ["Strawberry", "Rapsberry", "Blackberry", "Blueberry"]
     ]
     
-    let headers = ["Fruits", "Vegetables"]
+    let headers = ["Fruits", "Vegetables", "Ягоды"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -65,7 +66,7 @@ extension UIViewController: UITableViewDelegate {
         ]
         let alert = UIAlertController(title: nil,
                                       message: "Вы нажали на: \(words[indexPath.section][indexPath.row])",
-                                      preferredStyle: .alert)                         
+                                      preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             alert.dismiss(animated: true)
             tableView.deselectRow(at: indexPath, animated: true)
